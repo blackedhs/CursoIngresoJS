@@ -6,13 +6,52 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
+	var largo;
+	var ancho;
+	var alambre;
+	var perimetro;
+
+	largo=document.getElementById('Largo').value;
+	largo=parseInt(largo);
+	ancho=document.getElementById('Ancho').value;
+	ancho=parseInt(ancho);
+
+	perimetro=2*largo+2*ancho;
+	alambre=perimetro*3;
+
+	alert("Se debe comprar "+alambre+" metros de alambre");
 
 }
 function Circulo () 
 {
-	
+	var radio;
+	var perimetro;
+	var alambre;
+
+	radio=document.getElementById('Radio').value;
+	radio=parseInt(radio);
+
+	perimetro=2*3.1416*radio;
+	alambre=perimetro*3;
+
+	alert("Se debe comprar "+alambre+" metros de alambre");
 }
 function Materiales () 
 {
-	
+	var largo;
+	var ancho;
+	var cemento;
+	var area;
+	var cal;
+
+	largo=document.getElementById('Largo').value;
+	largo=parseInt(largo);
+	ancho=document.getElementById('Ancho').value;
+	ancho=parseInt(ancho);
+
+	area=largo*ancho;
+	cemento=area*2;
+	cal=area*3;
+
+	alert("Se deben comprar "+cemento+" bolsas de cemento y "+cal+" de cal");
 }
