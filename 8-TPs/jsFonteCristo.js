@@ -7,7 +7,84 @@ c.	Se pedirán un número positivo y se mostrará la cantidad de números divisi
 d.	Se pedirán un número positivo y se mostrará si el número es un número primo o no.
 e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
+var numeroIngresado;
+
 function ComenzarIngreso () 
 {
  	
+}
+function NumerosPares()
+{
+	var par;
+	var cantidad;
+
+	cantidad=0;
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+	par=numeroIngresado%2;
+
+	if (numeroIngresado>0){
+		if (par==0){
+			for (var i =numeroIngresado; i > 0; i-=2) {
+				cantidad++;
+			}
+		}else{
+			numeroIngresado--;
+			for (var i =numeroIngresado; i > 0; i-=2) {
+				cantidad++;
+			}
+		}
+	}
+	alert("La cantidad de numeros pares desde el numero ingresado es: "+cantidad);
+}
+function NumerosImpares() 
+{
+	var impar;
+	var cantidad;
+
+	cantidad=0;
+	numeroIngresado=document.getElementById('numero').value;	
+	numeroIngresado=parseInt(numeroIngresado);
+	impar=numeroIngresado%2;
+
+	if (numeroIngresado>0){
+		if (impar==0){
+			numeroIngresado--;
+			for (var i =numeroIngresado; i > 0; i-=2) {
+				cantidad++;
+			}
+		}else{
+			for (var i =numeroIngresado; i > 0; i-=2) {
+				cantidad++;
+			}
+		}
+	}
+	alert("La cantidad de numeros impares desde el numero ingresado es: "+cantidad);
+
+}
+function NumerosDivisibles()
+{
+	var divisible;
+	var cantidad;
+
+	cantidad=0;
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+	for (var i =numeroIngresado ; i >= 0; i--) {
+		divisible=numeroIngresado/i;
+		if (divisible==0){
+			cantidad++;
+		}
+	}
+	alert ("la cantidad de numeros divisibles"+cantidad);
+}
+function VerificarPrimo()
+{
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+}
+function NumerosPrimos()
+{
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
 }
