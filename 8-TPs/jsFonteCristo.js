@@ -71,20 +71,55 @@ function NumerosDivisibles()
 	numeroIngresado=document.getElementById('numero').value;
 	numeroIngresado=parseInt(numeroIngresado);
 	for (var i =numeroIngresado ; i >= 0; i--) {
-		divisible=numeroIngresado/i;
+		divisible=numeroIngresado%i;
 		if (divisible==0){
 			cantidad++;
 		}
 	}
-	alert ("la cantidad de numeros divisibles"+cantidad);
+	alert ("la cantidad de numeros divisibles "+cantidad);
 }
 function VerificarPrimo()
 {
+	var divisible;
+	var cantidad;
+
+	cantidad=0;
 	numeroIngresado=document.getElementById('numero').value;
 	numeroIngresado=parseInt(numeroIngresado);
+	for (var i =numeroIngresado ; i >= 0; i--) {
+		divisible=numeroIngresado%i;
+		if (divisible==0){
+			cantidad++;
+		}
+	}
+	if (cantidad==2){
+			alert("El numero ingresado es un numero primo ");
+	}else
+		{
+			alert("El numero ingresado no es numero primo");
+	}
 }
 function NumerosPrimos()
 {
+	var divisible;
+	var cantidad;
+	var cantidadNumerosPrimos;
+
+	cantidad=0;
+	cantidadNumerosPrimos=0;
 	numeroIngresado=document.getElementById('numero').value;
 	numeroIngresado=parseInt(numeroIngresado);
+	for (numeroIngresado; numeroIngresado>=0;numeroIngresado--){
+		cantidad=0;
+		for (var i =numeroIngresado; i >=0; i--) {
+			divisible=numeroIngresado%i;
+			if (divisible==0){
+				cantidad++;
+			}
+		}
+			if (cantidad==2){
+				cantidadNumerosPrimos++;
+			}
+	}
+	alert("la cantidad de Numeros Primos desde el numero ingresado es: "+cantidadNumerosPrimos);
 }
